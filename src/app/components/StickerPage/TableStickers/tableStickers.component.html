@@ -1,17 +1,15 @@
 <table class="table-auto">
     <thead>
       <tr>
-        <th >ID</th>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Price</th>
-        <th>Final Price</th>
-        <th>Amount Stickers</th>
+        <th>Артикул</th>
+        <th>Количество</th>
+        <th>Цена</th>
+        <th>Стоимость за упаковку</th>
+        <th>Количество стикеров</th>
       </tr>
     </thead>
     <tbody align="center">
       <tr *ngFor="let sticker of stickers">
-        <td>{{ sticker.id }}</td>
         <td>{{ sticker.name }}</td>
         <td>{{ sticker.amount }}</td>
         <td>{{ sticker.price }}</td>

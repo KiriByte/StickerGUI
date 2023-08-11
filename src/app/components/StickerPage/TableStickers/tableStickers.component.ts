@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ISticker } from '../../models/sticker.model';
-import { ApiService } from '../../services/api.service';
+import { ISticker } from '../../../models/sticker.model';
+import { ApiService } from '../../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'table-Stickers',
+  selector: 'table-stickers',
   templateUrl: './tableStickers.component.html',
 })
 export class TableStickers implements OnInit {

@@ -1,0 +1,63 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      required
+      [(ngModel)]="sticker.name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount:</label>
+    <input
+      type="number"
+      id="amount"
+      name="amount"
+      class="form-control"
+      required
+      [(ngModel)]="sticker.amount"
+      (ngModelChange)="calculateFinalPrice()"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input
+      type="number"
+      id="price"
+      name="price"
+      class="form-control"
+      required
+      [(ngModel)]="sticker.price"
+      (ngModelChange)="calculateFinalPrice()"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="finalPrice">Final Price:</label>
+    <input
+      type="number"
+      id="finalPrice"
+      name="finalPrice"
+      class="form-control"
+      [(ngModel)]="sticker.finalPrice"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="amountStickers">Amount of Stickers:</label>
+    <input
+      type="number"
+      id="amountStickers"
+      name="amountStickers"
+      class="form-control"
+      [(ngModel)]="sticker.amountStickers"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
