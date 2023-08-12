@@ -4,18 +4,22 @@ import { Observable } from 'rxjs';
 import { ISticker } from '../models/sticker.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = 'http://192.168.1.5:5063/api/Sticker/'; // Замените на свой API URL
+  private apiUrl = 'http://192.168.1.5:5063/api/Sticker/';
 
   constructor(private http: HttpClient) {}
 
   getStickers(): Observable<ISticker[]> {
-    return this.http.get<ISticker[]>(this.apiUrl+'GetStickers');
+    return this.http.get<ISticker[]>(this.apiUrl + 'GetStickers');
   }
 
-  deleteModel(id: number):Observable<any>{
-    return this.http.delete(this.apiUrl+'DeleteModel?id='+id);
+  deleteModel(id: number): Observable<any> {
+    return this.http.delete(this.apiUrl + 'DeleteModel?id=' + id);
+  }
+
+  addModel(sticker: ISticker): Observable<any> {
+    return this.http.post(this.apiUrl + 'AddModel', sticker);
   }
 }

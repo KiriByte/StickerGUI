@@ -6,12 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
 import { StickerPageModule } from './components/StickerPage/stickerPage.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
-
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -19,7 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
