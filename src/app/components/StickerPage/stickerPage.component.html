@@ -1,9 +1,10 @@
-<div fxLayout="row" style="height: 100vh">
-  <div fxFlex="33">
-    <add-Form (addedModel)="tableStickers.refreshTable()"></add-Form>
-  </div>
-
-  <div fxFlex="66">
-    <table-stickers #tableStickers> </table-stickers>
-  </div>
+<div fxFlex="33">
+  <add-form (addedModel)="tableStickers.refreshTable()"></add-form>
 </div>
+
+<div fxFlex="66">
+  <table-stickers #tableStickers> </table-stickers>
+</div>
+
+<generate-button></generate-button>
+<files-table></files-table>

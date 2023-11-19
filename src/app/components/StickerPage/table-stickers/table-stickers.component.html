@@ -1,0 +1,28 @@
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th>Артикул</th>
+      <th>Количество</th>
+      <th>Цена</th>
+      <th>Стоимость за упаковку</th>
+      <th>Количество стикеров</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr *ngFor="let sticker of stickers">
+      <td>{{ sticker.sticker.name }}</td>
+      <td>{{ sticker.sticker.amount }}</td>
+      <td>{{ sticker.sticker.price }}</td>
+      <td>{{ sticker.sticker.finalPrice }}</td>
+      <td>{{ sticker.amount }}</td>
+      <td>
+        <button
+          class="border py-2 px-4 rounded bg-red-500"
+          (click)="deleteModel(sticker.id)"
+        >
+          delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

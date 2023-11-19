@@ -7,7 +7,7 @@
       name="name"
       class="form-control"
       required
-      [(ngModel)]="sticker.name"
+      [(ngModel)]="stickers.sticker.name"
     />
   </div>
 
@@ -19,7 +19,7 @@
       name="amount"
       class="form-control"
       required
-      [(ngModel)]="sticker.amount"
+      [(ngModel)]="stickers.sticker.amount"
       (ngModelChange)="calculateFinalPrice()"
     />
   </div>
@@ -32,7 +32,7 @@
       name="price"
       class="form-control"
       required
-      [(ngModel)]="sticker.price"
+      [(ngModel)]="stickers.sticker.price"
       (ngModelChange)="calculateFinalPrice()"
     />
   </div>
@@ -44,7 +44,7 @@
       id="finalPrice"
       name="finalPrice"
       class="form-control"
-      [(ngModel)]="sticker.finalPrice"
+      [(ngModel)]="stickers.sticker.finalPrice"
     />
   </div>
 
@@ -55,7 +55,7 @@
       id="amountStickers"
       name="amountStickers"
       class="form-control"
-      [(ngModel)]="sticker.amountStickers"
+      [(ngModel)]="stickers.amount"
     />
   </div>
 

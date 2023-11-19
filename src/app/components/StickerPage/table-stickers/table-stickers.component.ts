@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ISticker } from '../../../models/sticker.model';
-import { ApiService } from '../../../services/api.service';
+import { IStickerAmount } from 'src/app/models/stickerAmount.model';
+import { StickerApiService } from 'src/app/services/stickerApi.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'table-stickers',
-  templateUrl: './tableStickers.component.html',
+  templateUrl: './table-stickers.component.html',
 })
 export class TableStickers implements OnInit {
-  stickers: ISticker[] = [];
+  stickers: IStickerAmount[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: StickerApiService) {}
 
   ngOnInit(): void {
     this.refreshTable();
@@ -23,7 +23,7 @@ export class TableStickers implements OnInit {
   }
 
   refreshTable(): void {
-    this.apiService.getStickers().subscribe((stickers: ISticker[]) => {
+    this.apiService.getStickers().subscribe((stickers: IStickerAmount[]) => {
       this.stickers = stickers;
     });
   }
